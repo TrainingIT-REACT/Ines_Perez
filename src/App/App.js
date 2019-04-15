@@ -13,13 +13,11 @@ class App extends Component {
   }
 
   render() {
-      console.log(history);
     return (
         <Router history={history}>
             <ErrorBoundary>
                 <Switch>
                     <Route exact path="/login" component={Login} />
-                    {/*<PrivateRoute path="/" component={RestrictedArea} />*/}
                     <PrivateRoute path="/" component={Home} />
                 </Switch>
             </ErrorBoundary>
